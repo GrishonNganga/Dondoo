@@ -1,0 +1,10 @@
+.header img{
+    width: 25%;
+}
+
+@media screen and (min-width: 600px){
+    .header img{
+        width: 10%;
+    }
+    
+}

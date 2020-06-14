@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Dondoo"
+    }
+  },
+  "defaultProject": "Dondoo",
+  "cli": {
+    "analytics": false
+  }
 }
