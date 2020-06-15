@@ -17,8 +17,8 @@ This was done as Moringa Core IP 1 and enganged me to properly understand Angula
 * Angular
 ## Support and contact details
 For a cup of coffee. Please reach out via `grishon.nganga01@gmail.com`
-### License
-Dondoo is free, open source, and GPL friendly.
+### MIT License
+Copyright (c) [2020] Grishon Ng'ang'a
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,5 +37,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Copyright (c) [2020] Dondoo Group
+Copyright (c) {2020}
+**Grishon Ng'ang'a**
