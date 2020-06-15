@@ -4,12 +4,17 @@
   <div class=" container add-quote" *ngIf="add">
     <h3>Add a Quote</h3>
     <form #quoteForm='ngForm' (ngSubmit)='addAQuote(quoteForm)'>
-        <textarea name="addedQuote" id="added-quote" rows="8" class="form-control col-sm-8 offset-sm-2" ngModel></textarea>
+        <label for="author" class="offset-sm-2">Author</label>
+        <input class="form-control col-sm-8 offset-sm-2" placeholder="Author Name" type="text" name="author" id="author" ngModel>
+        <label for="sayer" class="offset-sm-2">Quote from</label>
+        <input class="form-control col-sm-8 offset-sm-2" placeholder="Who said the quote" type="text" name="sayer" id="sayer" ngModel>        
+        <label for="added-quote" class="offset-sm-2">Quote</label>
+        <textarea name="addedQuote" placeholder="What is the quote" id="added-quote" rows="8" class="form-control col-sm-8 offset-sm-2" ngModel></textarea>
         <button type="submit" class="btn btn-danger offset-4 offset-sm-5 mt-5">Post Quote</button>
     </form>
 </div>
   <div class="quotes" *ngIf="show">
-        <div class="quote container mb-3" *ngFor='let quote of quotesList let quoteIndex = index'>
+        <div class="quote container mb-3 pb-2" *ngFor='let quote of quotesList let quoteIndex = index'>
             <div class="row quote-row">
                 <div class="col-2 ratings-divs">
                     <div class="row">
@@ -28,12 +33,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-sm-4 quote-txt">
-                    <p>{{quote.quote}}</p>
-                </div>
                 <div class="col">
-                    <i class="material-icons delete-icon" (click)='deleteQuote(quoteIndex)'>delete</i>
+                    <div class="row">
+                        <div class="col author-txt">
+                            Posted by {{quote.author}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 col-sm-0 quote-txt">
+                            <p>{{quote.quote}} ~~ <b class="sayer-name">{{quote.quoteSayer}}</b></p>
+                        </div>
+                        <div class="col">
+                            <i class="material-icons delete-icon" (click)='deleteQuote(quoteIndex)'>delete</i>
+                        </div>
+                    </div>
+                    
                 </div>
+                
             </div>
         </div>
   </div>

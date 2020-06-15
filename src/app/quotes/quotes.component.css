@@ -28,6 +28,9 @@
     margin-bottom: 5px;
 }
 
+.quote{
+    border-bottom: solid gray .5px;
+}
 .quote:hover{
     background-color: lightyellow;
     border-radius: 10px;
@@ -35,9 +38,13 @@
     border-left: solid red 5px
 }
 
-
+.author-txt, .sayer-name{
+    color: gray;
+    font-size: 15px;
+}
 
 .quote-txt{
+    font-size: 20px;
     margin-top: 25px;
 }
 

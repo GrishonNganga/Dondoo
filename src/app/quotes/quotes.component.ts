@@ -24,7 +24,7 @@ export class QuotesComponent implements OnInit {
 
 
    addAQuote(quoteForm){
-     this.quote = new Quote("", quoteForm.value.addedQuote, 0,0, false, false);
+     this.quote = new Quote(quoteForm.value.author, quoteForm.value.addedQuote, 0,0, false, false, quoteForm.value.sayer);
 
      this.quotesList.push(this.quote);
      quoteForm.resetForm();
@@ -70,9 +70,9 @@ export class QuotesComponent implements OnInit {
     }
    }
   quotesList: Quote[] = [
-    new Quote("Grishon Gikima", "If it's alright with you!", 10, 0, false, true),
-    new Quote("Winnie Muthoni", "I am an innovator!", 100, 0, true, false),
-    new Quote("J Cole", "I am from Fayetnaam!", 1000, 0, true, false)
+    new Quote("Grishon Gikima", "If it's alright with you!", 10, 0, false, true, "Grishon Gikima"),
+    new Quote("Winnie Muthoni", "I am an innovator!", 100, 0, true, false, "Nelson Mandela"),
+    new Quote("J Cole", "I am from Fayetnaam!", 1000, 0, true, false, "J Cole")
   ];
   ngOnInit(): void {
   }
