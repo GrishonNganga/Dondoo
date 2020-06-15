@@ -40,22 +40,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-10 col-sm-0 quote-txt">
-                            <p>{{quote.quote}} ~~ <b class="sayer-name">{{quote.quoteSayer}}</b></p>
+                        <div class="col-9 col-sm-0 quote-txt">
+                            <p>{{quote.quote}}</p>
                         </div>
                         <div class="col">
                             <i class="material-icons delete-icon" (click)='deleteQuote(quoteIndex)'>delete</i>
                         </div>
+                        <div class="col">
+                            <i class="material-icons more-icon" (click)='showDescription(quoteIndex)'>more_vert</i>
+                        </div>
                     </div>
-                    
+                    <app-quote-description [quoteDescription]='quote.quoteSayer' [showDescription]='quote.showDescription'></app-quote-description>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <p>This shouldnt be here!</p>
-                </div>
-               
-            </div>
+            
         </div>
   </div>
  

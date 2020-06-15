@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 import { Quote } from '../quote';
 
@@ -37,6 +37,9 @@ export class QuotesComponent implements OnInit {
      this.quotesList.splice(index, 1);
    }
 
+   showDescription(index){
+     this.quotesList[index].showDescription = !this.quotesList[index].showDescription;
+   }
 
    upVote(index){
      if(this.quotesList[index].self){

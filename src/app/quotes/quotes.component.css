@@ -67,6 +67,10 @@ h3{
     margin-top: 35px;
     display: none;
 }
+.more-icon{
+    margin-top: 35px;
+    display: none;
+}
 
 .upvoted{
     color: yellow;
@@ -76,6 +80,10 @@ h3{
     color: red;
 }
 .quote:hover .delete-icon{
+    display: block;
+}
+
+.quote:hover .more-icon{
     display: block;
 }
 
