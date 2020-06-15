@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { QuotesComponent } from './quotes/quotes.component';
+import { QuoteDescriptionComponent } from './quote-description/quote-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    QuotesComponent
+    QuotesComponent,
+    QuoteDescriptionComponent
   ],
   imports: [
     BrowserModule,
