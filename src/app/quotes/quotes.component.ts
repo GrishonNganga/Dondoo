@@ -38,10 +38,37 @@ export class QuotesComponent implements OnInit {
    }
 
 
-   upVote(){
-
+   upVote(index){
+     if(this.quotesList[index].self){
+       this.quotesList[index].self = !this.quotesList[index].self;
+       this.quotesList[index].upvote -=1;
+     }else{
+       if(this.quotesList[index].unlike){
+         this.quotesList[index].unlike = !this.quotesList[index].unlike;
+       }
+      this.quotesList[index].self = !this.quotesList[index].self;
+      this.quotesList[index].upvote +=1;
+     }
    }
 
+   downVote(index){
+    if(this.quotesList[index].unlike){
+      this.quotesList[index].unlike = !this.quotesList[index].unlike;
+      this.quotesList[index].downvote -=1;
+      this.quotesList[index].upvote +=1;
+    }else{
+      if(this.quotesList[index].self){
+        this.quotesList[index].self = !this.quotesList[index].self;
+        this.quotesList[index].upvote -=1;
+        this.quotesList[index].downvote +=1;
+      }else{
+        this.quotesList[index].unlike = !this.quotesList[index].unlike;
+        this.quotesList[index].downvote +=1;
+        this.quotesList[index].upvote -=1;
+      }
+     
+    }
+   }
   quotesList: Quote[] = [
     new Quote("Grishon Gikima", "If it's alright with you!", 10, 0, false, true),
     new Quote("Winnie Muthoni", "I am an innovator!", 100, 0, true, false),

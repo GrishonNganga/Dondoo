@@ -1,4 +1,4 @@
-  <div>
+  <div class="plus-icon">
     <i class="material-icons add-icon" (click)='addQuote()'>add</i>
   </div>
   <div class=" container add-quote" *ngIf="add">
@@ -14,7 +14,7 @@
                 <div class="col-2 ratings-divs">
                     <div class="row">
                         <div class="col upvote-div">
-                            <i class="material-icons upvote" (click)='upVote()' [ngClass]="{'upvoted': quote.self }">forward</i>
+                            <i class="material-icons upvote" (click)='upVote(quoteIndex)' [ngClass]="{'upvoted': quote.self }">forward</i>
                         </div>
                     </div>
                     <div class="row">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="row">
                         <div class="col downvote-div">
-                            <i class="material-icons downvote" [ngClass]="{'downvoted': quote.unlike }">forward</i>
+                            <i class="material-icons downvote" [ngClass]="{'downvoted': quote.unlike }" (click)='downVote(quoteIndex)'>forward</i>
                         </div>
                     </div>
                 </div>
