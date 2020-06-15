@@ -1,0 +1,85 @@
+.add-icon{
+    font-size: 60px;
+    color: red;
+    margin-top: 100%;
+    margin-left: 80%;
+    top: 30%;
+    position: absolute;
+}
+.add-icon:hover{
+    background-color: lightyellow;
+    border-radius: 40px;
+}
+.upvote{
+    color: gray;
+    transform: rotate(-90deg);
+    padding: 5px;
+    
+}
+.downvote{
+    color: gray;
+    transform: rotate(90deg);
+    padding: 5px; 
+}
+
+.votes-div{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.quote:hover{
+    background-color: lightyellow;
+    border-radius: 10px;
+    border-top-left-radius:0px;
+    border-left: solid red 5px
+}
+
+
+
+.quote-txt{
+    margin-top: 25px;
+}
+
+.upvote:hover, .downvote:hover{
+    background-color: lightgray;
+    border-radius: 4px;
+}
+.upvote:hover{
+    color: yellow;
+}
+.downvote:hover{
+    color: red;
+}
+h3{
+    text-align: center;
+}
+
+.delete-icon{
+    color: red;
+    margin-top: 35px;
+    display: none;
+}
+
+.upvoted{
+    color: yellow;
+}
+
+.downvoted{
+    color: red;
+}
+.quote:hover .delete-icon{
+    display: block;
+}
+
+@media screen and (min-width: 600px){
+    .add-icon{
+        margin-top: 2%;
+        margin-left: 4%;
+        position: sticky;
+    }
+    .ratings-divs{
+        max-width: 7%;
+    }
+    
+}

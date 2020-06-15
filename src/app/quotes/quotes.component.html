@@ -1,0 +1,44 @@
+  <div>
+    <i class="material-icons add-icon" (click)='addQuote()'>add</i>
+  </div>
+  <div class=" container add-quote" *ngIf="add">
+    <h3>Add a Quote</h3>
+    <form #quoteForm='ngForm' (ngSubmit)='addAQuote(quoteForm)'>
+        <textarea name="addedQuote" id="added-quote" rows="8" class="form-control col-sm-8 offset-sm-2" ngModel></textarea>
+        <button type="submit" class="btn btn-danger offset-4 offset-sm-5 mt-5">Post Quote</button>
+    </form>
+</div>
+  <div class="quotes" *ngIf="show">
+        <div class="quote container mb-3" *ngFor='let quote of quotesList let quoteIndex = index'>
+            <div class="row quote-row">
+                <div class="col-2 ratings-divs">
+                    <div class="row">
+                        <div class="col upvote-div">
+                            <i class="material-icons upvote" (click)='upVote()' [ngClass]="{'upvoted': quote.self }">forward</i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col votes-div">
+                            <span class="votes">&nbsp; {{quote.upvote}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col downvote-div">
+                            <i class="material-icons downvote" [ngClass]="{'downvoted': quote.unlike }">forward</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 quote-txt">
+                    <p>{{quote.quote}}</p>
+                </div>
+                <div class="col">
+                    <i class="material-icons delete-icon" (click)='deleteQuote(quoteIndex)'>delete</i>
+                </div>
+            </div>
+        </div>
+  </div>
+ 
+  
+
+    
+    
